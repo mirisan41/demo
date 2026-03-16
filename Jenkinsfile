@@ -1,12 +1,15 @@
-node{
-  checkout scm
-  stage('Build'){
-    echo 'Building...'
-  }
-  stage('Test'){
-    echo 'Testing...'
-  }
-  stage('Deploy'){
-    echo 'Deploying...'
+pipeline{
+  agent any 
+  stages{
+    stage('build'){
+      steps{
+        echo 'Building...'
+      }
+    }
+    stage('test'){
+      steps{
+        echo 'Testing...'
+      }
+    }
   }
 }
